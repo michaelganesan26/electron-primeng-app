@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'electron-primeng-app';
+  title = 'Electron PrimeNG Sample Application';
 }
