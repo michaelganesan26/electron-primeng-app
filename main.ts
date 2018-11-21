@@ -3,7 +3,7 @@ const colors = require('colors');
 const path = require('path');
 
 const env = require('env-variable')({
-  runtime: 'debugging',
+  runtime: 'DEBUGGING',
   testingUrl: 'http://localhost:8080',
   showDevTools: true,
   filePath: path.join(__dirname, 'dist', 'index.html')
@@ -17,8 +17,8 @@ function createWindow() {
   // Create the browser window.
   win = new BrowserWindow({ width: 800, height: 600, title: app.getName() });
 
-  if (env.runtime === 'testing') {
-    win.loadUrl(env.testingUrl);
+  if (env.runtime === 'DEBUGGING') {
+    win.loadURL(env.testingUrl);
 
     // show dev tools
     if (env.showDevTools) {
