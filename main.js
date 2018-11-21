@@ -1,10 +1,14 @@
 var _a = require('electron'), app = _a.app, BrowserWindow = _a.BrowserWindow;
 var colors = require('colors');
 var path = require('path');
+require('electron-reload')(__dirname, {
+    electron: path.join(__dirname, 'node_modules', '.bin', 'electron.cmd'),
+    hardResetMethod: 'quit'
+});
 var env = require('env-variable')({
     runtime: 'DEBUGGING',
     testingUrl: 'http://localhost:8080',
-    showDevTools: true,
+    showDevTools: false,
     filePath: path.join(__dirname, 'dist', 'index.html')
 });
 // Keep a global reference of the window object, if you don't, the window will

@@ -2,10 +2,20 @@ const { app, BrowserWindow } = require('electron');
 const colors = require('colors');
 const path = require('path');
 
+
+
+
+require('electron-reload')(__dirname, {
+  electron: path.join(__dirname, 'node_modules', '.bin', 'electron.cmd'),
+  hardResetMethod: 'quit'
+});
+
+
+
 const env = require('env-variable')({
   runtime: 'DEBUGGING',
   testingUrl: 'http://localhost:8080',
-  showDevTools: true,
+  showDevTools: false,
   filePath: path.join(__dirname, 'dist', 'index.html')
 });
 
