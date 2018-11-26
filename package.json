@@ -12,7 +12,8 @@
     "e2e": "ng e2e",
     "push": "git push -u origin master",
     "testCode": "nodemon ./testCode/testEnv.js",
-    "compileElectronMain": "tsc ./main.ts --lib \"es6\"  --watch"
+    "compileElectronMainWithWatch": "tsc ./main.ts --lib \"es6\"  --watch",
+    "compileElectronMain": "tsc ./main.ts"
   },
   "private": true,
   "dependencies": {

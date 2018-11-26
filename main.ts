@@ -15,7 +15,7 @@ require('electron-reload')(__dirname, {
 const env = require('env-variable')({
   runtime: 'DEBUGGING',
   testingUrl: 'http://localhost:8080',
-  showDevTools: false,
+  showDevTools: true,
   filePath: path.join(__dirname, 'dist', 'index.html')
 });
 

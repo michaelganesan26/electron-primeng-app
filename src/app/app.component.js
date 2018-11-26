@@ -10,6 +10,7 @@ var core_1 = require("@angular/core");
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'Electron PrimeNG Sample Application';
+        this.subTitle = 'Prime NG';
     }
     AppComponent = __decorate([
         core_1.Component({
